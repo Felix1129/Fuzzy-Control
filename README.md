@@ -1,16 +1,44 @@
 # Fuzzy-Control
 
-Fuzzy logic
-Fuzzy logic is an inference method similar to human thinking. In traditional logic, only yes (1) or no (0) can be selected. However, fuzzy logic is a continuous interval between 0 and 1, with a fuzzy zone added in the middle area, which fully explains the uncertain nature of fuzzy.
-This thesis studied the networked control systems (NCSs) of polynomial fuzzy time-delay systems based on piecewise polynomial Lyapunov functions (PPLF), and applied 
-them to the path tracking control of mobile robots and quadrotors. The number of fuzzy rules could be reduced to two by using the novel modeling method, which greatly reduces the 
-hardware cost. Both mobile robots and quadrotors had the problem of time delay in the plant. The time delay system developed in this work could tolerate the time delay of the plant 
-through the modeling method of calculating the time delay of the plant additionally. The Lyapunov-Krasovskii piecewise polynomial functional function was designed using the 
-minimum-type polynomial Lyapunov piecewise function. By reducing the stable condition number, the gain solution space could be expanded, and then the performance of the controller 
-was better than the existing polynomial fuzzy network. Since the number of stable conditions was less than the existing methods, the proposed method could also expand the feasible 
-solution space and obtain better controller performance compared with the general Lyapunov function controller. Thus, based on the piecewise polynomial Lyapunov-Krasovskii 
-function, considering the time delay and package dropoutcaused by the network, a robust stability condition is proposed in this work with calculated time delay in the SOS-based 
-relaxation stabilization condition, and an SOS-based formation relaxation condition. The theorems proposed in this work consider the network-caused package dropout and time delay. 
-Theorem 1 additionally considers the time delay of the plant and then simulates the virtual model of the mobile robot and the quadrotor to verify that the proposed theorem can be applied to 
-the controller resisting external disturbances, it tolerates model uncertainty and formation effectiveness. Finally, the designed network controller was used for the path tracking of the mobile 
-robot and the quadrotor, and the performance of the theorem proposed in this work was verified to be better than the existing controller.
+## Fuzzy logic
+Fuzzy logic is an inference method similar to human thinking. In traditional logic, only yes (1) or no (0) can be selected. 
+However, fuzzy logic is a continuous interval between 0 and 1, with a fuzzy zone added in the middle area, which fully explains the uncertain nature of fuzzy.
+
+## Fuzzy architecture
+### Knowledge base:
+We need to define relevant fuzzy sets for each input feature variable. 
+For example, the temperature set includes cold and hot, and the motor speed includes low, medium, high, etc.
+
+### Rule base:
+We can use domain experts to design a set of rules for us to make inferences and decisions. 
+For example, if our goal is to control the product quality of a certain machine, we ca use the process parameters as input features for inference. 
+For example: IF the temperature is low AND the humidity is high THEN the product quality is unqualified.
+
+### Fuzzification:
+This step will convert the unambiguous input values ​​into the corresponding fuzzy sets through fuzzification. 
+And it is combined with the previously established knowledge base and rule base to complete the fuzzification mechanism.
+
+### Inference:
+The degree of fuzzy matching is calculated through fuzzy input and fuzzy sets. 
+The rules to be triggered are determined based on the input and the corresponding fuzzy set.
+
+### Defuzzification:
+Fuzzy operations are performed through the rules set by experts, and all matching rules are aggregated and output.
+
+## Fuzzy set
+Fuzzy sets use the size of the membership function as the main decision-making mechanism. 
+A fuzzy set is a combination of things with common characteristics. 
+It is specially used to summarize a group of things with the same characteristics. 
+Sets are also a way to express the concept of things. 
+For example, "all machine temperatures", "color of a certain product", etc. can be called sets. 
+The things or objects that make up a set are called elements of the set. 
+For example: all machine temperatures = {15, 16,…,50}, each temperature is an element of the set.
+
+## Membership Function
+Belonging function is the most basic concept in fuzzy theory, and we can use belonging function to represent fuzzy sets. 
+It is represented by the attribution function μA(x). 
+Through μA(x), it takes a value in the [0, 1] interval, so each attribution value is between 0 and 1. 
+The size of the belonging function reflects the degree of belonging of element x to fuzzy set A. 
+Therefore, the closer the value of μA(x) is to 1, the higher the degree to which element x belongs to μA. 
+On the contrary, if the value of μA is closer to 0, it means that the degree of x belonging to μA is lower.
+
