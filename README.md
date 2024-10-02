@@ -1,4 +1,7 @@
 # Fuzzy-Control
+
+Fuzzy logic
+Fuzzy logic is an inference method similar to human thinking. In traditional logic, only yes (1) or no (0) can be selected. However, fuzzy logic is a continuous interval between 0 and 1, with a fuzzy zone added in the middle area, which fully explains the uncertain nature of fuzzy.
 This thesis studied the networked control systems (NCSs) of polynomial fuzzy time-delay systems based on piecewise polynomial Lyapunov functions (PPLF), and applied 
 them to the path tracking control of mobile robots and quadrotors. The number of fuzzy rules could be reduced to two by using the novel modeling method, which greatly reduces the 
 hardware cost. Both mobile robots and quadrotors had the problem of time delay in the plant. The time delay system developed in this work could tolerate the time delay of the plant 
